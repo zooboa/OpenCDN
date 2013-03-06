@@ -16,5 +16,5 @@
 
 	永久关闭方法：
 
-	vim  /etc/sysconfig/selinux  把SELINUX=disabled 并重启系统
+	#vim  /etc/sysconfig/selinux  把SELINUX=disabled 并重启系统
 
