@@ -1,0 +1,58 @@
+body {
+	margin:0;
+	background:white;
+	padding:0;
+}
+
+/* fix footer */
+
+#footer {
+	display:block;
+	width:100%;
+	bottom:0px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+#footer.relative {
+	position:relative;
+}
+
+/* Record List Commonly */
+div.list-header {
+	line-height:34px;
+	font-weight:12px;
+	border-bottom:1px dashed #DDD;
+	background-color:#EEE;
+	text-align:center;
+}
+
+div.show-grid {
+	line-height:30px;
+	margin-top:1px;
+	border-bottom:1px dashed #DDD;
+}
+
+div.show-grid > div {
+	text-align:center;
+}
+
+div.show-grid > div:hover {
+	background-color:#EEE;
+}
+
+div.click-change:hover{
+	cursor:pointer;
+}
+
+/*  */
+.tableli{
+width:200px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+list-style-type:none;
+}
+.tableli.li2{
+width:90px;
+}
