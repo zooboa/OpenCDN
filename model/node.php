@@ -37,7 +37,8 @@ class node extends model{
 	}
 
 	public function confUpdate($ipArray){
-		$dir = '../opencdn/opencdn.conf';
+		//$dir = '../opencdn/opencdn.conf';
+		$dir = '/etc/opencdn.conf';
 		if(!file_exists($dir)) return false;
 		$file = file_get_contents($dir);
 		$file = explode('[Node]', $file);

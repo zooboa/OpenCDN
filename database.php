@@ -2,7 +2,7 @@
 
 class database {
 	private $dbHost = 'localhost';
-	private $dbName = 'cdn';
+	private $dbName = 'cdn_info';
 	private $dbUser = 'root';
 	private $dbPass = '';
 	private $dbObj = false;
