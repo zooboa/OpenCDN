@@ -42,4 +42,6 @@
 
 **默认用户名：admin@ocdn.me  密码：ocdn.me **
 
+####截图如下：
 
+![Alt text](screenshot/login.png "前台login截图")
