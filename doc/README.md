@@ -4,7 +4,7 @@
 
 **本文档以 Centos 6.x 86_64 为蓝本** 本文档约定 所有命令以#打头
 
-
+	#wget https://github.com/zooboa/OpenCDN/blob/master/rpm/centos/6/opencdn-1.0-6.el6.x86_64.rpm
 
 	**yum -y localinstall ocdn-console-{version}.rpm** 推荐这么安装。会动解决依赖关系.
 
