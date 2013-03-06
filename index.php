@@ -104,11 +104,13 @@ router('api:login', function(){
 
 router('node',function(){
 	$user = model('user');
-	$user->sessionCheck();
+	$user_id = $user->sessionCheck();
 
 	$node = model('node');
 	$data = array();
+	$info = $user->get($user_id);
 	$data['list'] = $node->nodeList();
+	$data['info'] = $info;
 	view('node.html', $data);
 });
 
@@ -134,12 +136,15 @@ router('api:nodeAdd',function(){
 
 router('api:nodeRemove',function(){
 	$user = model('user');
-	$user->sessionCheck(function(){
+	$user_id = $user->sessionCheck(function(){
 		json(false, '未登录');
 	});
 
 	$id =  filter('id', '/^[0-9]{1,8}$/', 'ID格式错误');
 	$node = model('node');
+
+	$info = $user->get($user_id);
+	if($info['auth'] != 1) json(false, '没有操作权限');
 
 	$node->remove($id);
 	$list = $node->nodeList();
@@ -602,6 +607,7 @@ router('mail=([a-f0-9]{32})',function($matches){
 	$token = $matches[1];
 	$user = model('user');
 	$result = $user->mailChangeToken($token);
+	header('Content-type: text/html; charset=utf-8'); 
 	if($result == false) echo '更换邮箱失败';
 	else echo '更换邮箱成功！';
 });
