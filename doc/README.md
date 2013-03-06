@@ -4,9 +4,7 @@
 
 **本文档以 Centos 6.x 86_64 为蓝本** 本文档约定 所有命令以#打头
 
-	#yum -y install httpd mysql-server php php-cli php-mbstring php-pdo php-mysql php-common
 
-	#rpm -ivh ocdn-console-{version}.rpm
 
 	**yum -y localinstall ocdn-console-{version}.rpm** 推荐这么安装。会动解决依赖关系.
 
@@ -24,5 +22,23 @@
 
 	#启动Mysql 并设置密码
 
-	#service mysqld start  设置密码:# 
+	#service mysqld start  设置密码不讲了 
+
+####导入数据
+
+	#cd /usr/share/ocdn
+
+	#mysql -uroot -p -e 'create database cdn_info' 新建cdn_info数据库
+
+	#mysql -uroot -p cdn_info <cdn_info.sql 导入数据
+
+	#修改web 数据库配置文件 /usr/share/ocdn/database.php 数据库连接信息
+
+####启动服务
+
+	#service httpd restart
+
+**访问http://x.x.x.x/ocdn/index.php**
+
+**默认用户名：admin@ocdn.me  密码：ocdn.me **
 
