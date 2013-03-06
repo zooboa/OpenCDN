@@ -44,4 +44,4 @@
 
 ####截图如下：
 
-![Alt text](screenshot/login.png "前台login截图")
+![Alt text](img/login.png "前台login截图")
