@@ -8,6 +8,8 @@
 
 	#rpm -ivh ocdn-console-{version}.rpm
 
+	**yum -y localinstall ocdn-console-{version}.rpm** 推荐这么安装。会动解决依赖关系.
+
 	检查Selinux状态
 
 	#sestatus
